@@ -39,7 +39,7 @@ if($_SERVER["REQUEST_METHOD"] == "GET")
   else
   {
     // If there are no rows returned, create a response array with a status of false and an error message
-    $result = array("status" => false , "message" => 'No quote(s) found...'); 
+    $result = array("status" => false , "message" => 'No quotes found.'); 
   }
 
   // Encode the response array as JSON and output it
@@ -49,7 +49,7 @@ else
 {
   // If the HTTP request method is not GET, create a response array with a status of 405
 {
-	 $error = array("status" => 405 , "message" => 'Method not allowed...');
+	 $error = array("status" => 405 , "message" => 'Method is not allowed.');
 	 
 echo json_encode($error);
 }
@@ -97,7 +97,7 @@ if($_SERVER["REQUEST_METHOD"] == "GET")
 	else
 	{
 		// Create an array to hold the result of the operation
-		$result = array("status" => false , "message" => 'Quote not found...');
+		$result = array("status" => false , "message" => 'Quote is not found.');
 	}
 
 	// Return the result as a JSON-encoded string
@@ -106,7 +106,7 @@ if($_SERVER["REQUEST_METHOD"] == "GET")
 else
 {
 	// Create an array to hold the error message
-	$error = array("status" => 405 , "message" => 'Method not allowed...');
+	$error = array("status" => 405 , "message" => 'Method is not allowed.');
 
 	// Return the error message as a JSON-encoded string
 	echo json_encode($error);
@@ -155,7 +155,7 @@ if($_SERVER["REQUEST_METHOD"] == "GET")
 	else
 	{
 		// Create an array to hold the result of the operation
-		$result = array("status" => false , "message" => 'Quote not found...');
+		$result = array("status" => false , "message" => 'Quote is not found.');
 	}
 
 	// Return the result as a JSON-encoded string
@@ -164,7 +164,7 @@ if($_SERVER["REQUEST_METHOD"] == "GET")
 else
 {
 	// Create an array to hold the error message
-	$error = array("status" => 405 , "message" => 'Method not allowed...');
+	$error = array("status" => 405 , "message" => 'Method is not allowed.');
 
 	// Return the error message as a JSON-encoded string
 	echo json_encode($error);
@@ -213,7 +213,7 @@ if($_SERVER["REQUEST_METHOD"] == "GET")
 	else
 	{
 		// Create an array to hold the result of the operation
-		$result = array("status" => false , "message" => 'Quote not found...');
+		$result = array("status" => false , "message" => 'Quote is not found.');
 	}
 
 	// Return the result as a JSON-encoded string
@@ -222,7 +222,7 @@ if($_SERVER["REQUEST_METHOD"] == "GET")
 else
 {
 	// Create an array to hold the error message
-	$error = array("status" => 405 , "message" => 'Method not allowed...');
+	$error = array("status" => 405 , "message" => 'Method is not allowed.');
 
 	// Return the error message as a JSON-encoded string
 	echo json_encode($error);
@@ -268,7 +268,7 @@ if($_SERVER["REQUEST_METHOD"] == "GET")
   else
   {
     // Build the result array with a failure status and an error message
-    $result = array("status" => false , "message" => 'Quote not found...');
+    $result = array("status" => false , "message" => 'Quote is not found.');
   }
   
   // Encode the result array as a JSON string and output it to the client
@@ -277,7 +277,7 @@ if($_SERVER["REQUEST_METHOD"] == "GET")
 else
 {
   // Build an error array with an HTTP status code and an error message
-  $error = array("status" => 405 , "message" => 'Method not allowed...');
+  $error = array("status" => 405 , "message" => 'Method is not allowed.');
   
   // Encode the error array as a JSON string and output it to the client
   echo json_encode($error);
@@ -318,12 +318,12 @@ if($_SERVER["REQUEST_METHOD"] === "POST")
     if ($res)
     {
         // If successful, create a result array with success status and message
-        $result = array("status" => true , "message" => "Quote Added Successfully...");
+        $result = array("status" => true , "message" => "Quote added successfully!");
     }
     else
     {
         // If unsuccessful, create a result array with failure status and message
-        $result = array("status" => false , "message" => "Something went wrong...");
+        $result = array("status" => false , "message" => "Error.");
     }
 
     // Encode the result array into JSON and send the response
@@ -332,7 +332,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST")
 else
 {
     // If the request method is not POST, create an error array with appropriate status and message
-    $error = array("status" => 405 , "message" => 'Method not allowed...');
+    $error = array("status" => 405 , "message" => 'Method is not allowed.');
     
     // Encode the error array into JSON and send the response
     echo json_encode($error);
@@ -369,12 +369,12 @@ if($_SERVER["REQUEST_METHOD"] === "POST")
     if ($res)
     {
         // if update was successful, return success status and message
-        $result = array("status" => true , "message" => "Quote Updated Successfully...");
+        $result = array("status" => true , "message" => "Quote updated successfully!");
     }
     else
     {
         // if update failed, return failure status and message
-        $result = array("status" => false , "message" => "Quote With ID not Found");
+        $result = array("status" => false , "message" => "Quote With ID not Found.");
     }
 
     // encode result as JSON and return it to the client
@@ -383,7 +383,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST")
 else
 {
     // if request method is not POST, return error status and message
-    $error = array("status" => 405 , "message" => 'Method not allowed...');
+    $error = array("status" => 405 , "message" => 'Method is not allowed.');
     echo json_encode($error);
 }  
 
@@ -476,7 +476,7 @@ if($_SERVER["REQUEST_METHOD"] == "GET")
   else
   {
     // If there are no rows returned, set the response accordingly
-    $result = array("status" => false , "message" => 'No Author(s) found...'); 
+    $result = array("status" => false , "message" => 'No Author(s) found.'); 
   }
 
   // Return the response as a JSON string
@@ -485,7 +485,7 @@ if($_SERVER["REQUEST_METHOD"] == "GET")
 else
 {
   // If the request method is not GET, set the error response accordingly
-  $error = array("status" => 405 , "message" => 'Method not allowed...');
+  $error = array("status" => 405 , "message" => 'Method not allowed.');
 
   // Return the error response as a JSON string
   echo json_encode($error);
@@ -535,7 +535,7 @@ if($_SERVER["REQUEST_METHOD"] == "GET")
     else
     {
         // create an error response if no rows are returned
-        $result = array("status" => false , "message" => 'Author not found...');
+        $result = array("status" => false , "message" => 'Author not found.');
     }
     
     // return the response as JSON
@@ -544,7 +544,7 @@ if($_SERVER["REQUEST_METHOD"] == "GET")
 else
 {
     // create an error response if the request method is not GET
-    $error = array("status" => 405 , "message" => 'Method not allowed...');
+    $error = array("status" => 405 , "message" => 'Method not allowed.');
     
     // return the response as JSON
     echo json_encode($error);
@@ -583,12 +583,12 @@ if($_SERVER["REQUEST_METHOD"] === "POST")
   if ($res)
   {
     // Create a success response with a message
-    $result = array("status" => true , "message" => "Author Added Successfully...");
+    $result = array("status" => true , "message" => "Author added successfully.");
   }
   else
   {
     // Create an error response with a message
-    $result = array("status" => false , "message" => "Something went wrong...");
+    $result = array("status" => false , "message" => "Something went wrong.");
   }
 
   // Send the response back in JSON format
@@ -597,7 +597,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST")
 else
 {
   // Create an error response if the request method is not POST
-  $error = array("status" => 405 , "message" => 'Method not allowed...');
+  $error = array("status" => 405 , "message" => 'Method not allowed.');
   echo json_encode($error);
 }
 
@@ -632,7 +632,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST")
     // Create response based on result of update query
     if ($res)
     {
-        $result = array("status" => true , "message" => "Author Updated Successfully...");
+        $result = array("status" => true , "message" => "Author updated successfully.");
     }
     else
     {
@@ -645,7 +645,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST")
 else
 {
     // Send error response for non-POST request method
-    $error = array("status" => 405 , "message" => 'Method not allowed...');
+    $error = array("status" => 405 , "message" => 'Method not allowed.');
     echo json_encode($error);
 } 
 

@@ -37,11 +37,11 @@ class Connection
 		// check if connection was successful and set message accordingly
 		if(!$this->con)
 		{
-			 $this->message = "Some problem with connection...";
+			 $this->message = "Connectivity issues detected.";
 		}
 		else
 		{
-			 $this->message = "Connected Succesfully...";
+			 $this->message = "Connection successful!";
 		}
 	}
 }

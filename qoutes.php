@@ -81,7 +81,7 @@ class quotes extends Connection
   else
   {
     // If the query failed, display an error message
-    echo "Query failed...";
+    echo "Query failed.";
   }
 }
 }
